@@ -1,63 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:layout_height="match_parent">
     <TextView
-        android:text=""
+        tools:text="City Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="36sp"
+        android:textSize="28dp"
         android:id="@+id/tv_city" />
     <TextView
-        android:text=""
+        tools:text="Last Update Time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="18sp"
+        android:textSize="15dp"
         android:id="@+id/tv_last_update" />
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
         android:layout_gravity="center" />
     <TextView
-        android:text=""
+        tools:text="Description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="25dp"
         android:id="@+id/tv_description" />
     <TextView
-        android:text=""
+        tools:text="Humidity %"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="25dp"
         android:id="@+id/tv_humidity" />
     <TextView
-        android:text=""
+        tools:text="Sun_rise/set time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="25dp"
         android:id="@+id/tv_time" />
     <TextView
-        android:text=""
+        tools:text="Temperature"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="80sp"
+        android:textSize="60dp"
         android:id="@+id/tv_celsius" />
+    <TextView
+        tools:text="Error Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:id="@+id/tv_error_text" />
 </LinearLayout>

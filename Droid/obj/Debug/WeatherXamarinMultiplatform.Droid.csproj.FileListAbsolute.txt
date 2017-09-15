@@ -25,12 +25,12 @@
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/WeatherXamarinMultiplatform.Droid.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/WeatherXamarinMultiplatform.Droid.pdb
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/android/bin/com.strategicsoft.WeatherXamarinMultiplatform.apk
-/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/layout/main.xml
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/values/strings.xml
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/mipmap-hdpi/icon.png
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/mipmap-mdpi/icon.png
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/mipmap-xhdpi/icon.png
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/mipmap-xxhdpi/icon.png
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/mipmap-xxxhdpi/icon.png
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/res/layout/main.xml
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/R.cs.flag
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/uploadflags.txt
