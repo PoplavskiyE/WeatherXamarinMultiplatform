@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{5BC14580-45DE-40CD-89C0-F75C29189879}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/NetworkHelper/NetworkHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
     <Files>
-      <File FileName="Droid/MainActivity.cs" Line="25" Column="32" />
-      <File FileName="Droid/NetworkHelper/NetworkHelper.cs" Line="23" Column="11" />
+      <File FileName="Droid/MainActivity.cs" Line="72" Column="30" />
+      <File FileName="WeatherXamarinMultiplatform/NetworkHelper/NetworkHelper.cs" Line="24" Column="73" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WeatherXamarinMultiplatform" expanded="True">
+            <Node name="WeatherXamarinMultiplatform" expanded="True">
+              <Node name="NetworkHelper" expanded="True" />
+              <Node name="Utils" expanded="True" />
+            </Node>
             <Node name="WeatherXamarinMultiplatform.Droid" expanded="True">
-              <Node name="NetworkHelper" expanded="True">
-                <Node name="NetworkHelper.cs" selected="True" />
-              </Node>
+              <Node name="MainActivity.cs" selected="True" />
             </Node>
           </Node>
         </State>

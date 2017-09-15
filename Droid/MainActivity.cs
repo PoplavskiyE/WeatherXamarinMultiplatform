@@ -5,12 +5,9 @@ using Android.Locations;
 using XamarinWeather.Model;
 using Android.Runtime;
 using System;
-using Newtonsoft.Json;
 using WeatherXamarinMultiplatform.Droid;
 using Square.Picasso;
 using Android.Content;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace XamarinWeather
 {
@@ -46,10 +43,13 @@ namespace XamarinWeather
         private void initLocationManager()
         {
 			locationManager = (LocationManager)GetSystemService(Context.LocationService);
-            Criteria criteria = new Criteria{
-                Accuracy = Accuracy.Fine
-            };
-			provider = locationManager.GetBestProvider(criteria, false);
+
+            //provider = locationManager.GetBestProvider(new Criteria(), false);
+            provider = LocationManager.NetworkProvider;
+			//Criteria criteria = new Criteria
+			//{
+				//Accuracy = Accuracy.Fine
+			//};
             //IList<String> acceptableProviders = locationManager.GetProviders(criteria, true);
             //if(acceptableProviders.Any()){
             //    provider = acceptableProviders.First();
@@ -62,7 +62,7 @@ namespace XamarinWeather
 
         protected override void OnResume(){
             base.OnResume();
-            locationManager.RequestLocationUpdates(provider,0,0,this);
+            locationManager.RequestLocationUpdates(provider,120000,10,this);
 
         }
 
@@ -76,9 +76,11 @@ namespace XamarinWeather
         {
             if (location == null){
                 System.Diagnostics.Debug.WriteLine(GetString(Resource.String.error_no_location_lable));
+                errorText.Visibility = Android.Views.ViewStates.Visible;
                 errorText.Text = GetString(Resource.String.error_no_location_message);
                 startRequestWeather("53,9","27,57");;
             }else {
+                errorText.Visibility = Android.Views.ViewStates.Gone;
                 lat = Math.Round(location.Latitude, 4);
                 lng = Math.Round(location.Longitude, 4);
                 startRequestWeather(lat.ToString(), lng.ToString());
@@ -95,7 +97,7 @@ namespace XamarinWeather
             new GetWeather(this, openWeatherMap).Execute(NetworkHelper.NetworkHelper.GetRequestUrl(lat, lng));
         }
 
-        private class GetWeather : AsyncTask<String, Java.Lang.Void, String>{
+        private class GetWeather : AsyncTask<String, Java.Lang.Void, OpenWeatherMap>{
             private ProgressDialog pd = new ProgressDialog(Application.Context);
             private MainActivity activity;
             OpenWeatherMap openWeatherMap;
@@ -111,41 +113,38 @@ namespace XamarinWeather
                 pd.Show();
             }
 
-            protected override string RunInBackground(params string[] @params)
+            protected override OpenWeatherMap RunInBackground(params string[] @params)
             {
-                string stream = null;
                 string urlString = @params[0];
             	NetworkHelper.NetworkHelper http = new NetworkHelper.NetworkHelper();
-                stream = http.getWeatherData(urlString);
-                return stream;
+                return http.getWeatherDataAsync(urlString).Result; ;
             }
-            protected override void OnPostExecute(string result){
+            protected override void OnPostExecute(OpenWeatherMap result){
                 base.OnPostExecute(result);
-                if (result.Contains("Error: Not found city") || String.IsNullOrEmpty(result)){
+                if (result==null){
                     pd.Dismiss();
                     return;
                 }
-                openWeatherMap = JsonConvert.DeserializeObject<OpenWeatherMap>(result);
-                System.Diagnostics.Debug.WriteLine(result);
+                //openWeatherMap = JsonConvert.DeserializeObject<OpenWeatherMap>(result);
+                //System.Diagnostics.Debug.WriteLine(result);
                 pd.Dismiss();
 
                 //Add Data
-                if (openWeatherMap != null){
+
                     //Show Weather Data
-                    activity.city.Text = $"{openWeatherMap.name},{openWeatherMap.sys.country}";
+                    activity.city.Text = $"{result.name},{result.sys.country}";
                     activity.lastUpdate.Text = $"Last Updated: {DateTime.Now.ToString("dd MM yyyy HH:mm")}";
-                    activity.description.Text = $"{openWeatherMap.weather[0].description}";
-                    activity.humidity.Text = $"Humidity: {openWeatherMap.main.humidity} %";
-                    activity.time.Text = $"Sunrise: {Utils.Utils.UnixTimeStampToDateTime(openWeatherMap.sys.sunrise)}/Sunset: {Utils.Utils.UnixTimeStampToDateTime(openWeatherMap.sys.sunset)}";
-                    var temp = openWeatherMap.main.temp - 273.16;
+                    activity.description.Text = $"{result.weather[0].description}";
+                    activity.humidity.Text = $"Humidity: {result.main.humidity} %";
+                    activity.time.Text = $"Sunrise: {Utils.Utils.UnixTimeStampToDateTime(result.sys.sunrise)}/Sunset: {Utils.Utils.UnixTimeStampToDateTime(result.sys.sunset)}";
+                    var temp = result.main.temp - 273.16;
                     activity.celsius.Text = $"Temp: {Math.Round(temp)} °C";
 
-                    if(!String.IsNullOrEmpty(openWeatherMap.weather[0].icon)){
+                    if(!String.IsNullOrEmpty(result.weather[0].icon)){
                         Picasso.With(activity.ApplicationContext)
-                               .Load(NetworkHelper.NetworkHelper.GetImageUrl(openWeatherMap.weather[0].icon))
+                               .Load(NetworkHelper.NetworkHelper.GetImageUrl(result.weather[0].icon))
                                .Into(activity.image);
                     }
-                }
             }
         }
     }

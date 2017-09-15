@@ -2,7 +2,6 @@
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/WeatherXamarinMultiplatform.Droid.pdb
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/com.strategicsoft.WeatherXamarinMultiplatform.apk
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/com.strategicsoft.WeatherXamarinMultiplatform-Signed.apk
-/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Newtonsoft.Json.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Square.OkHttp.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Square.OkIO.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Square.Picasso.dll
@@ -18,6 +17,7 @@
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Xamarin.Android.Support.v4.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Xamarin.Android.Support.Vector.Drawable.dll
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Newtonsoft.Json.dll
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/WeatherXamarinMultiplatform.pdb
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/bin/Debug/Newtonsoft.Json.xml
 /Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/Droid/obj/Debug/WeatherXamarinMultiplatform.Droid.csprojResolveAssemblyReference.cache

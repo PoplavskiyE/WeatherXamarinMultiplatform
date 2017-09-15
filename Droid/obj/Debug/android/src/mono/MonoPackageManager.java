@@ -99,7 +99,6 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "WeatherXamarinMultiplatform.Droid.dll" comes first in this list. */
 		"WeatherXamarinMultiplatform.Droid.dll",
-		"Newtonsoft.Json.dll",
 		"Square.OkHttp.dll",
 		"Square.OkIO.dll",
 		"Square.Picasso.dll",
@@ -115,6 +114,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"WeatherXamarinMultiplatform.dll",
+		"Newtonsoft.Json.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

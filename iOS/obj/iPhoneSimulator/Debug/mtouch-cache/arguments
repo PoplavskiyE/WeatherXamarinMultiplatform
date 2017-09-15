@@ -308,6 +308,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
 	/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/WeatherXamarinMultiplatform/bin/Debug/WeatherXamarinMultiplatform.dll \
+	-r \
+	/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/WeatherXamarinMultiplatform/bin/Debug/Newtonsoft.Json.dll \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
 	/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/bin/iPhoneSimulator/Debug/WeatherXamarinMultiplatform.iOS.exe \
