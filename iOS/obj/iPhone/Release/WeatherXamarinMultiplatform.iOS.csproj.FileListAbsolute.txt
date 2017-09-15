@@ -1,0 +1,11 @@
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/bin/iPhone/Release/WeatherXamarinMultiplatform.iOS.exe
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/bin/iPhone/Release/WeatherXamarinMultiplatform.iOS.pdb
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/bin/iPhone/Release/WeatherXamarinMultiplatform.dll
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/ibtool/_BundleResourceWithLogicalName.items
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/actool/_PartialAppManifest.items
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/actool/_BundleResourceWithLogicalName.items
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/optimized/
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/WeatherXamarinMultiplatform.iOS.csprojResolveAssemblyReference.cache
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/WeatherXamarinMultiplatform.iOS.csproj.CoreCompileInputs.cache
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/WeatherXamarinMultiplatform.iOS.exe
+/Users/macbookpro13/VisualStudioProjects/WeatherXamarinMultiplatform/iOS/obj/iPhone/Release/WeatherXamarinMultiplatform.iOS.pdb

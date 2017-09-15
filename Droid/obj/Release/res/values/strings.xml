@@ -1,0 +1,1 @@
+<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">WeatherXamarinMultiplatform.Droid</string><string name="dialog_title">Please wait...</string><string name="error_no_location_lable">No location</string><string name="error_no_location_message">Unable to determine your location. Try again in a short while.</string></resources>

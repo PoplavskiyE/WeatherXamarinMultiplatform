@@ -1,9 +1,22 @@
 ﻿<Properties StartupConfiguration="{5BC14580-45DE-40CD-89C0-F75C29189879}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Droid/NetworkHelper/NetworkHelper.cs">
     <Files>
-      <File FileName="Droid/MainActivity.cs" Line="119" Column="39" />
-      <File FileName="Droid/NetworkHelper/NetworkHelper.cs" Line="15" Column="25" />
+      <File FileName="Droid/MainActivity.cs" Line="25" Column="32" />
+      <File FileName="Droid/NetworkHelper/NetworkHelper.cs" Line="23" Column="11" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WeatherXamarinMultiplatform" expanded="True">
+            <Node name="WeatherXamarinMultiplatform.Droid" expanded="True">
+              <Node name="NetworkHelper" expanded="True">
+                <Node name="NetworkHelper.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WeatherXamarinMultiplatform.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.QLF7N15710010721" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

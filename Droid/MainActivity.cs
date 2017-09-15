@@ -49,13 +49,13 @@ namespace XamarinWeather
             Criteria criteria = new Criteria{
                 Accuracy = Accuracy.Fine
             };
-			//provider = locationManager.GetBestProvider(criteria, false);
-            IList<String> acceptableProviders = locationManager.GetProviders(criteria, true);
-            if(acceptableProviders.Any()){
-                provider = acceptableProviders.First();
-            }else{
-                provider = string.Empty;
-            }
+			provider = locationManager.GetBestProvider(criteria, false);
+            //IList<String> acceptableProviders = locationManager.GetProviders(criteria, true);
+            //if(acceptableProviders.Any()){
+            //    provider = acceptableProviders.First();
+            //}else{
+            //    provider = string.Empty;
+            //}
 			Location location = locationManager.GetLastKnownLocation(provider);
 			OnLocationChanged(location);
         }
