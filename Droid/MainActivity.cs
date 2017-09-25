@@ -8,13 +8,15 @@ using System;
 using WeatherXamarinMultiplatform.Droid;
 using Square.Picasso;
 using Android.Content;
+using WeatherXamarinMultiplatform;
 
 namespace XamarinWeather
 {
     [Activity(Label = "XamarinWeather", MainLauncher = true,Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
-    public class MainActivity : Activity,ILocationListener
+    public class MainActivity : Activity,ILocationListener,IRootView
     {
-        TextView city, lastUpdate, humidity, time, description, celsius,errorText;
+        private RootPresenter rp;
+        private TextView city, lastUpdate, humidity, time, description, celsius,errorText;
         ImageView image;
 
         LocationManager locationManager;
@@ -24,7 +26,7 @@ namespace XamarinWeather
 
         protected override void OnCreate(Bundle savedInstanceState){
             base.OnCreate(savedInstanceState);
-
+            rp = new RootPresenter(this);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
@@ -94,58 +96,43 @@ namespace XamarinWeather
         public void OnStatusChanged(string provider, [GeneratedEnum] Availability status, Bundle extras){}
 
         public void startRequestWeather(string lat,string lng){
-            new GetWeather(this, openWeatherMap).Execute(NetworkHelper.NetworkHelper.GetRequestUrl(lat, lng));
+            rp.getWeather(lat,lng);
+        }
+        public void SetCity(string locationName)
+        {
+            city.Text = locationName;
         }
 
-        private class GetWeather : AsyncTask<String, Java.Lang.Void, OpenWeatherMap>{
-            private ProgressDialog pd = new ProgressDialog(Application.Context);
-            private MainActivity activity;
-            OpenWeatherMap openWeatherMap;
-            public GetWeather(MainActivity activity,OpenWeatherMap openWeatherMap){
-                this.openWeatherMap = openWeatherMap;
-                this.activity = activity;
-            }
-            protected override void OnPreExecute()
-            {
-                base.OnPreExecute();
-                pd.Window.SetType(Android.Views.WindowManagerTypes.SystemAlert);
-                pd.SetTitle(Resource.String.dialog_title);
-                pd.Show();
-            }
+        public void SetDescription(string desc)
+        {
+            description.Text = desc;
+        }
 
-            protected override OpenWeatherMap RunInBackground(params string[] @params)
-            {
-                string urlString = @params[0];
-            	NetworkHelper.NetworkHelper http = new NetworkHelper.NetworkHelper();
-                return http.getWeatherDataAsync(urlString).Result; ;
-            }
-            protected override void OnPostExecute(OpenWeatherMap result){
-                base.OnPostExecute(result);
-                if (result==null){
-                    pd.Dismiss();
-                    return;
-                }
-                //openWeatherMap = JsonConvert.DeserializeObject<OpenWeatherMap>(result);
-                //System.Diagnostics.Debug.WriteLine(result);
-                pd.Dismiss();
+        public void SetUpd(string lastUpdate)
+        {
+            this.lastUpdate.Text = lastUpdate;
+        }
 
-                //Add Data
+        public void SetHumidity(string humidity)
+        {
+            this.humidity.Text = humidity;
+        }
 
-                    //Show Weather Data
-                    activity.city.Text = $"{result.name},{result.sys.country}";
-                    activity.lastUpdate.Text = $"Last Updated: {DateTime.Now.ToString("dd MM yyyy HH:mm")}";
-                    activity.description.Text = $"{result.weather[0].description}";
-                    activity.humidity.Text = $"Humidity: {result.main.humidity} %";
-                    activity.time.Text = $"Sunrise: {Utils.Utils.UnixTimeStampToDateTime(result.sys.sunrise)}/Sunset: {Utils.Utils.UnixTimeStampToDateTime(result.sys.sunset)}";
-                    var temp = result.main.temp - 273.16;
-                    activity.celsius.Text = $"Temp: {Math.Round(temp)} °C";
+        public void SetSunTime(string sunTime)
+        {
+            time.Text = sunTime;
+        }
 
-                    if(!String.IsNullOrEmpty(result.weather[0].icon)){
-                        Picasso.With(activity.ApplicationContext)
-                               .Load(NetworkHelper.NetworkHelper.GetImageUrl(result.weather[0].icon))
-                               .Into(activity.image);
-                    }
-            }
+        public void SetTemp(string temp)
+        {
+            celsius.Text = temp;
+        }
+
+        public void loadImage(string imageUrl)
+        {
+               Picasso.With(this)
+                      .Load(imageUrl)
+                               .Into(image);
         }
     }
 }

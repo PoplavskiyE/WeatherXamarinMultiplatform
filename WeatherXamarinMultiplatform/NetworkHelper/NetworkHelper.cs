@@ -4,8 +4,6 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using XamarinWeather.Model;
-//using Java.IO;
-//using Java.Net;
 
 namespace XamarinWeather.NetworkHelper
 {
@@ -23,26 +21,6 @@ namespace XamarinWeather.NetworkHelper
 		}
         public async System.Threading.Tasks.Task<OpenWeatherMap> getWeatherDataAsync(String urlString)
         {
-            //String stream = null;
-            //try { 
-            //URL url = new URL(urlString);
-            //    using(var urlConnection = (HttpURLConnection)url.OpenConnection())
-            //    {
-            //        if (urlConnection.ResponseCode == HttpStatus.Ok) {
-            //            BufferedReader r = new BufferedReader(new InputStreamReader(urlConnection.InputStream));
-            //            StringBuilder sb = new StringBuilder();
-            //            String line;
-            //            while((line = r.ReadLine())!=null){
-            //                sb.Append(line);
-            //            }
-            //            stream = sb.ToString();
-            //            urlConnection.Disconnect();
-            //        }
-            //    }
-            //}catch(Exception ex){
-            //    System.Diagnostics.Debug.WriteLine(ex.Message);
-            //}
-            //return stream;
             OpenWeatherMap openWeatherMap = null;
             HttpWebRequest request = (System.Net.HttpWebRequest)WebRequest.Create(urlString);
             var response = await request.GetResponseAsync().ConfigureAwait(false);

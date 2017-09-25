@@ -1,24 +1,9 @@
 ﻿<Properties StartupConfiguration="{5BC14580-45DE-40CD-89C0-F75C29189879}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/ViewController.cs">
     <Files>
-      <File FileName="Droid/MainActivity.cs" Line="72" Column="30" />
-      <File FileName="WeatherXamarinMultiplatform/NetworkHelper/NetworkHelper.cs" Line="24" Column="73" />
+      <File FileName="iOS/ViewController.cs" Line="26" Column="27" />
+      <File FileName="Droid/MainActivity.cs" Line="133" Column="34" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="WeatherXamarinMultiplatform" expanded="True">
-            <Node name="WeatherXamarinMultiplatform" expanded="True">
-              <Node name="NetworkHelper" expanded="True" />
-              <Node name="Utils" expanded="True" />
-            </Node>
-            <Node name="WeatherXamarinMultiplatform.Droid" expanded="True">
-              <Node name="MainActivity.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WeatherXamarinMultiplatform.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.QLF7N15710010721" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -27,7 +12,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.WeatherXamarinMultiplatform.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1BBD6C3C-E059-4470-A778-62D67D05C4D9">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.WeatherXamarinMultiplatform.iOS>
+  <MonoDevelop.Ide.ItemProperties.WeatherXamarinMultiplatform.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D9C9B022-4EF1-444F-8014-F06EEB5236AE" />
 </Properties>

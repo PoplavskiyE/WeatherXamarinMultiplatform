@@ -2,10 +2,6 @@ XamarinWeather.MainActivity, WeatherXamarinMultiplatform.Droid;md54ab1876b014688
 XamarinWeather.MainActivity, WeatherXamarinMultiplatform.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54ab1876b01468812541b2b797a50af79.MainActivity
 XamarinWeather.MainActivity;md54ab1876b01468812541b2b797a50af79.MainActivity
 xamarinweather.MainActivity;md54ab1876b01468812541b2b797a50af79.MainActivity
-XamarinWeather.MainActivity/GetWeather, WeatherXamarinMultiplatform.Droid;md54ab1876b01468812541b2b797a50af79.MainActivity_GetWeather
-XamarinWeather.MainActivity+GetWeather, WeatherXamarinMultiplatform.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54ab1876b01468812541b2b797a50af79.MainActivity_GetWeather
-XamarinWeather.MainActivity.GetWeather;md54ab1876b01468812541b2b797a50af79.MainActivity_GetWeather
-xamarinweather.MainActivity_GetWeather;md54ab1876b01468812541b2b797a50af79.MainActivity_GetWeather
 Square.OkHttp.Call/ActionCallback, Square.OkHttp;com.squareup.okhttp.Call_ActionCallback
 Square.OkHttp.Call+ActionCallback, Square.OkHttp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null;com.squareup.okhttp.Call_ActionCallback
 Square.OkHttp.Call.ActionCallback;com.squareup.okhttp.Call_ActionCallback
